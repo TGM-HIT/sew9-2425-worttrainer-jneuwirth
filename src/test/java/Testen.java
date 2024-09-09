@@ -2,9 +2,17 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Hier wird die ganze Arbeit getestet
+ * @author Julian Neuwirth
+ * @version 2024-09-09
+ */
 public class Testen {
 
 
+    /**
+     * Hier Teste ich das Modell
+     */
     @Test
     @DisplayName("Diese Methode Testet das Model")
     void worttrainertest() {
@@ -21,8 +29,8 @@ public class Testen {
         liste[0] = paar1;
         liste[1] = paar4;
         WortTrainer trainer = new WortTrainer(liste);
-        Assertions.assertTrue(trainer.raten("Hund"));
-        Assertions.assertTrue(trainer.raten("Katze"));
+        Assertions.assertTrue(trainer.eingabe("Hund"));
+        Assertions.assertTrue(trainer.eingabe("Katze"));
 
     }
 
