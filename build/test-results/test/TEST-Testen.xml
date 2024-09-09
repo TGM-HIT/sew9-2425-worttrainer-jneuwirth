@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Testen" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-09T13:48:26" hostname="DESKTOP-UCSLIJI" time="0.04">
+  <properties/>
+  <testcase name="Diese Methode Testet das Model" classname="Testen" time="0.04"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
