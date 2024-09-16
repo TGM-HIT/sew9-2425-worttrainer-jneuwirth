@@ -11,6 +11,7 @@ public class WortTrainer {
     private int falsch;
     private int richtig;
     private boolean voriges_ergebniss;
+    private WortTrainerSpeichern speichern;
 
     /**
      * Das ist der Konstruktor
@@ -22,6 +23,7 @@ public class WortTrainer {
         this.falsch = 0;
         this.richtig = 0;
         this.voriges_ergebniss = false;
+        this.speichern = new JOSNSpeichern();
     }
 
     /**
@@ -117,4 +119,16 @@ public class WortTrainer {
         return voriges_ergebniss;
     }
 
+    public void speichern() {
+        this.speichern.speichern(this,"wort.json");
+    }
+
+    public void load() {
+        WortTrainer i = this.speichern.laden("wort.json");
+        this.wortPaar = i.wortPaar;
+        this.index = i.index;
+        this.falsch = i.falsch;
+        this.richtig = i.richtig;
+        this.voriges_ergebniss = i.voriges_ergebniss;
+    }
 }
