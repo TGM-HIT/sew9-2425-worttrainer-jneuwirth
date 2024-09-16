@@ -10,6 +10,13 @@ public class WortPaar {
     private String url;
 
     /**
+     * Standard Konstruktor fürs Speichern
+     */
+    public WortPaar() {
+
+    }
+
+    /**
      * Das ist der Konstruktor
      * @param wort
      * @param url

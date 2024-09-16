@@ -3,8 +3,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Diese Klasse ist für das Speichern des WortTrainers da
+ * @author Julian Neuwirth
+ * @version 2024-09-16
+ */
 public class JOSNSpeichern implements WortTrainerSpeichern{
 
+    /**
+     * Das ist die Methode speichern
+     * @param wort
+     * @param i name des Files
+     */
     @Override
     public void speichern(WortTrainer wort, String i) {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -17,6 +27,11 @@ public class JOSNSpeichern implements WortTrainerSpeichern{
         }
     }
 
+    /**
+     * Diese methode läde die daten wieder
+     * @param i
+     * @return
+     */
     @Override
     public WortTrainer laden(String i) {
         ObjectMapper objectMapper = new ObjectMapper();

@@ -1,6 +1,6 @@
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 
 /**
  * Hier wird die ganze Arbeit getestet
@@ -32,6 +32,16 @@ public class Testen {
         Assertions.assertTrue(trainer.eingabe("Hund"));
         Assertions.assertTrue(trainer.eingabe("Katze"));
 
+        // speichern Testen
+        WortTrainer trainer1 = new WortTrainer(liste);
+        WortTrainer trainer2 = new WortTrainer();
+        trainer1.speichern();
+        trainer2.laden();
+        Assertions.assertTrue(trainer2.getWortPaar()[0].getWort().equals("Hund"));
+        Assertions.assertTrue(trainer2.getWortPaar()[1].getWort().equals("Katze"));
+
     }
+
+
 
 }

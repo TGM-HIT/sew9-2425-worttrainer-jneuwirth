@@ -14,6 +14,17 @@ public class WortTrainer {
     private WortTrainerSpeichern speichern;
 
     /**
+     * Standard Konstruktor fürs Speichern
+     */
+    public WortTrainer() {
+        this.index = -1;
+        this.falsch = 0;
+        this.richtig = 0;
+        this.voriges_ergebniss = false;
+        this.speichern = new JOSNSpeichern();
+    }
+
+    /**
      * Das ist der Konstruktor
      * @param wortPaar
      */
@@ -119,11 +130,17 @@ public class WortTrainer {
         return voriges_ergebniss;
     }
 
+    /**
+     * Diese Methode ist zum speichern da
+     */
     public void speichern() {
         this.speichern.speichern(this,"wort.json");
     }
 
-    public void load() {
+    /**
+     * Diese Methode ist zum laden da
+     */
+    public void laden() {
         WortTrainer i = this.speichern.laden("wort.json");
         this.wortPaar = i.wortPaar;
         this.index = i.index;
