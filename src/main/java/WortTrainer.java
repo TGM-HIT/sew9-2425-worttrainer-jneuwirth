@@ -1,5 +1,6 @@
 import java.util.Random;
 
+
 /**
  * Diese klasse ist ein Worttrainer für Volksschulkinder
  * @author Julian Neuwirth
@@ -12,6 +13,8 @@ public class WortTrainer {
     private int richtig;
     private boolean voriges_ergebniss;
     private WortTrainerSpeichern speichern;
+
+
 
     /**
      * Standard Konstruktor fürs Speichern
@@ -74,6 +77,15 @@ public class WortTrainer {
         return wahr;
     }
 
+    public String bildbekommen() {
+        if(this.index >= 0) {
+            return this.wortPaar[this.index].getUrl();
+        }else {
+            return this.wortPaar[0].getUrl();
+        }
+
+    }
+
     /**
      * Das ist die getter für WortPaare
      * @return WortPaare
@@ -134,14 +146,14 @@ public class WortTrainer {
      * Diese Methode ist zum speichern da
      */
     public void speichern() {
-        this.speichern.speichern(this,"wort.json");
+        this.speichern.speichern(this,"woerter.json");
     }
 
     /**
      * Diese Methode ist zum laden da
      */
     public void laden() {
-        WortTrainer i = this.speichern.laden("wort.json");
+        WortTrainer i = this.speichern.laden("woerter.json");
         this.wortPaar = i.wortPaar;
         this.index = i.index;
         this.falsch = i.falsch;

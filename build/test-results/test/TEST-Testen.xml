@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Testen" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-16T14:37:00" hostname="DESKTOP-UCSLIJI" time="0.306">
+<testsuite name="Testen" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-17T09:56:10" hostname="DESKTOP-UCSLIJI" time="0.532">
   <properties/>
-  <testcase name="Diese Methode Testet das Model" classname="Testen" time="0.306"/>
+  <testcase name="Diese Methode Testet das Model" classname="Testen" time="0.532"/>
   <system-out><![CDATA[Der WortTrainer wurde erfolgreich in JSON gespeichert.
+Der WortTrainer wurde erfolgreich in JSON geladen.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
