@@ -6,8 +6,17 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-
+/**
+ * Diese Klasse setzt die Grafik für das Programm um
+ * @author Julian Neuwirth
+ * @version 2024-09-17
+ */
 public class Grafik {
+    /**
+     * Das ist die Main Methode
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
         WortTrainer trainer = new WortTrainer();
         trainer.laden();
