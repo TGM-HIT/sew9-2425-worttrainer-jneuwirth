@@ -19,12 +19,20 @@ public class WortTrainer {
     /**
      * Standard Konstruktor fürs Speichern
      */
-    public WortTrainer() {
+    public WortTrainer(DataFormat format) {
         this.index = -1;
         this.falsch = 0;
         this.richtig = 0;
         this.voriges_ergebniss = false;
-        this.speichern = new JOSNSpeichern();
+        if (format == DataFormat.JSON) {
+            this.speichern = new JOSNSpeichern();
+        }
+        else if (format == DataFormat.XML) {
+            this.speichern = new XMLSpeichern();
+        }
+        else {
+            this.speichern = null;
+        }
     }
 
     /**

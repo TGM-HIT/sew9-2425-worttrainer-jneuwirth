@@ -18,7 +18,7 @@ public class Grafik {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        WortTrainer trainer = new WortTrainer();
+        WortTrainer trainer = new WortTrainer(DataFormat.JSON);
         trainer.laden();
         trainer.randomIndex();
         boolean wahr = true;
